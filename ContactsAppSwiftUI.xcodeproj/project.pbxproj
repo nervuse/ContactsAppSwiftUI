@@ -11,6 +11,12 @@
 		F38CF7952833D33A00990158 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38CF7942833D33A00990158 /* ContentView.swift */; };
 		F38CF7972833D34100990158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38CF7962833D34100990158 /* Assets.xcassets */; };
 		F38CF79A2833D34100990158 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38CF7992833D34100990158 /* Preview Assets.xcassets */; };
+		F3C9F1202834198800E293FB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9F11F2834198800E293FB /* Contact.swift */; };
+		F3C9F12228341E9200E293FB /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9F12128341E9200E293FB /* ContactCell.swift */; };
+		F3C9F124283426B900E293FB /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9F123283426B900E293FB /* UIApplication + Extension.swift */; };
+		F3C9F1272834E16500E293FB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F3C9F1262834E16500E293FB /* Realm */; };
+		F3C9F1292834E16500E293FB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3C9F1282834E16500E293FB /* RealmSwift */; };
+		F3C9F12B2835032E00E293FB /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C9F12A2835032E00E293FB /* DataBaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		F38CF7942833D33A00990158 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F38CF7962833D34100990158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38CF7992833D34100990158 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3C9F11F2834198800E293FB /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F3C9F12128341E9200E293FB /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		F3C9F123283426B900E293FB /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		F3C9F12A2835032E00E293FB /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C9F1292834E16500E293FB /* RealmSwift in Frameworks */,
+				F3C9F1272834E16500E293FB /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +63,11 @@
 		F38CF7912833D33A00990158 /* ContactsAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F38CF7A32833D38800990158 /* Helper */,
+				F38CF7A22833D38500990158 /* Extensions */,
+				F38CF7A12833D38200990158 /* Model */,
+				F38CF7A02833D37F00990158 /* View */,
 				F38CF7922833D33A00990158 /* ContactsAppSwiftUIApp.swift */,
-				F38CF7942833D33A00990158 /* ContentView.swift */,
 				F38CF7962833D34100990158 /* Assets.xcassets */,
 				F38CF7982833D34100990158 /* Preview Content */,
 			);
@@ -65,6 +80,39 @@
 				F38CF7992833D34100990158 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F38CF7A02833D37F00990158 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F38CF7942833D33A00990158 /* ContentView.swift */,
+				F3C9F12128341E9200E293FB /* ContactCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38CF7A12833D38200990158 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9F11F2834198800E293FB /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38CF7A22833D38500990158 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9F123283426B900E293FB /* UIApplication + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F38CF7A32833D38800990158 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F3C9F12A2835032E00E293FB /* DataBaseHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,10 @@
 			dependencies = (
 			);
 			name = ContactsAppSwiftUI;
+			packageProductDependencies = (
+				F3C9F1262834E16500E293FB /* Realm */,
+				F3C9F1282834E16500E293FB /* RealmSwift */,
+			);
 			productName = ContactsAppSwiftUI;
 			productReference = F38CF78F2833D33A00990158 /* ContactsAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,9 @@
 				Base,
 			);
 			mainGroup = F38CF7862833D33A00990158;
+			packageReferences = (
+				F3C9F1252834E16500E293FB /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = F38CF7902833D33A00990158 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C9F12228341E9200E293FB /* ContactCell.swift in Sources */,
+				F3C9F1202834198800E293FB /* Contact.swift in Sources */,
 				F38CF7952833D33A00990158 /* ContentView.swift in Sources */,
 				F38CF7932833D33A00990158 /* ContactsAppSwiftUIApp.swift in Sources */,
+				F3C9F12B2835032E00E293FB /* DataBaseHelper.swift in Sources */,
+				F3C9F124283426B900E293FB /* UIApplication + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +398,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3C9F1252834E16500E293FB /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3C9F1262834E16500E293FB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C9F1252834E16500E293FB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F3C9F1282834E16500E293FB /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3C9F1252834E16500E293FB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F38CF7872833D33A00990158 /* Project object */;
 }
